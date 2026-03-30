@@ -23,9 +23,9 @@ export default function ProjectsClient() {
             onClick={() => setFilter(item)}
             style={{
               padding: "0.5rem 1.25rem",
-              border: filter === item ? "1px solid #ee2e22" : "1px solid rgba(255,255,255,0.2)",
+              border: filter === item ? "1px solid #ee2e22" : "1px solid rgba(0,92,151,0.25)",
               background: filter === item ? "#ee2e22" : "transparent",
-              color: filter === item ? "#ffffff" : "rgba(255,255,255,0.8)",
+              color: filter === item ? "#ffffff" : "#005c97",
               fontSize: "0.65rem",
               letterSpacing: "0.15em",
               

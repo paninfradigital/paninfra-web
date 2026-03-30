@@ -34,16 +34,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <article style={{ minHeight: "100vh", paddingTop: "120px", paddingBottom: "8rem" }}>
+    <article style={{ minHeight: "100vh", paddingTop: "120px", paddingBottom: "8rem", background: "#FFFFF2" }}>
 
       {/* Article Header */}
       <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 2rem" }}>
         <div style={{ marginBottom: "2.5rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
-            <Link href="/blog" style={{ fontSize: "0.65rem", fontWeight: 700,  letterSpacing: "0.15em", color: "#ee2e22", textDecoration: "none" }}>
+            <Link href="/blog" style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", color: "#ee2e22", textDecoration: "none" }}>
               ← Back to Insights
             </Link>
-            <span style={{ fontSize: "0.65rem", fontWeight: 700,  letterSpacing: "0.15em", color: "#ee2e22" }}>
+            <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", color: "#ee2e22" }}>
               {post.category}
             </span>
           </div>
@@ -52,18 +52,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)",
             fontSize: "clamp(2rem, 5vw, 3.375rem)",
             fontWeight: 700,
-            color: "#ffffff",
+            color: "#005c97",
             lineHeight: 1.1,
             marginBottom: "1.5rem",
           }}>
             {post.title}
           </h1>
 
-          <p style={{ fontSize: "1.15rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+          <p style={{ fontSize: "1.15rem", color: "#2d6a9f", lineHeight: 1.7, marginBottom: "1.5rem" }}>
             {post.excerpt}
           </p>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1.5rem 0", borderTop: "1px solid rgba(255,255,255,0.1)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1.5rem 0", borderTop: "1px solid rgba(0,92,151,0.12)", borderBottom: "1px solid rgba(0,92,151,0.12)" }}>
             <Image
               src={post.author.avatar}
               alt={post.author.name}
@@ -72,11 +72,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               style={{ borderRadius: "50%", objectFit: "cover" }}
             />
             <div>
-              <span style={{ display: "block", color: "#ffffff", fontWeight: 500, fontSize: "0.95rem" }}>{post.author.name}</span>
-              <span style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}>{post.readTime} · {post.date}</span>
+              <span style={{ display: "block", color: "#005c97", fontWeight: 500, fontSize: "0.95rem" }}>{post.author.name}</span>
+              <span style={{ fontSize: "0.8rem", color: "#4a7fa3" }}>{post.readTime} · {post.date}</span>
             </div>
             {/* Social Share */}
-            <div style={{ marginLeft: "auto", display: "flex", gap: "1rem", color: "rgba(255,255,255,0.6)" }}>
+            <div style={{ marginLeft: "auto", display: "flex", gap: "1rem", color: "#4a7fa3" }}>
               <button title="Share on Twitter" style={{ background: "none", border: "none", cursor: "pointer", color: "inherit", padding: 0 }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
@@ -108,12 +108,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <div
           className="blog-body"
           dangerouslySetInnerHTML={{ __html: post.content }}
-          style={{ fontSize: "1.15rem", lineHeight: 1.8, color: "rgba(255,255,255,0.9)" }}
+          style={{ fontSize: "1.15rem", lineHeight: 1.8, color: "#2d6a9f" }}
         />
       </div>
 
       {/* Read More */}
-      <div style={{ maxWidth: "720px", margin: "5rem auto 0", padding: "2.5rem 2rem 0", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+      <div style={{ maxWidth: "720px", margin: "5rem auto 0", padding: "2.5rem 2rem 0", borderTop: "1px solid rgba(0,92,151,0.12)" }}>
         <Link
           href="/blog"
           style={{
@@ -134,16 +134,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         .blog-body p { margin-bottom: 2rem; }
         .blog-body h2 {
           font-family: var(--font-playfair, "Playfair Display", Georgia, serif);
-          font-size: 2.25rem; font-weight: 700; color: #ffffff;
+          font-size: 2.25rem; font-weight: 700; color: #005c97;
           margin-top: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;
         }
         .blog-body ul { margin-bottom: 2rem; padding-left: 1.5rem; list-style-type: disc; }
         .blog-body li { margin-bottom: 1rem; }
-        .blog-body strong { color: #ffffff; font-weight: 700; }
+        .blog-body strong { color: #005c97; font-weight: 700; }
         .blog-body blockquote {
           border-left: 4px solid #ee2e22; padding-left: 1.5rem; margin-left: 0;
           font-family: var(--font-playfair, "Playfair Display", Georgia, serif);
-          font-size: 1.6rem; line-height: 1.4; color: rgba(255,255,255,0.9);
+          font-size: 1.6rem; line-height: 1.4; color: #2d6a9f;
           font-style: italic; margin-top: 3rem; margin-bottom: 3rem;
         }
       `}} />

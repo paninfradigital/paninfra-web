@@ -18,7 +18,7 @@ const labelStyle = {
   fontSize: "0.65rem",
   letterSpacing: "0.15em",
   
-  color: "rgba(255,255,255,0.6)",
+  color: "#4a7fa3",
   marginBottom: "0.5rem",
 };
 
@@ -51,7 +51,7 @@ export default function ContactForm() {
       aria-label="Contact form"
       style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}
     >
-      <p style={{ fontFamily: "var(--font-playfair,Georgia,serif)", fontSize: "1.5rem", color: "#ffffff", marginBottom: "0.5rem" }}>
+      <p style={{ fontFamily: "var(--font-playfair,Georgia,serif)", fontSize: "1.5rem", color: "#005c97", marginBottom: "0.5rem" }}>
         Send Us a Message
       </p>
 

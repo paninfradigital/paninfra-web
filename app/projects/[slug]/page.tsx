@@ -32,7 +32,7 @@ export default async function ProjectDetailPage({ params }: Params) {
   ]);
 
   return (
-    <article style={{ paddingBottom: "6rem" }}>
+    <article style={{ paddingBottom: "6rem", background: "#FFFFF2" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -57,7 +57,7 @@ export default async function ProjectDetailPage({ params }: Params) {
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.25rem" }}>
             <div style={{ width: "24px", height: "1px", background: "#ee2e22" }} />
-            <p style={{ fontSize: "0.55rem", letterSpacing: "0.38em", color: "#ee2e22", }}>
+            <p style={{ fontSize: "0.55rem", letterSpacing: "0.38em", color: "#ee2e22" }}>
               {project.category}
             </p>
           </div>
@@ -75,11 +75,11 @@ export default async function ProjectDetailPage({ params }: Params) {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "2.5rem 2.5rem 0" }}>
         <Link
           href="/projects"
-          className="link-gold-hover"
           style={{
-            fontSize: "0.6rem", letterSpacing: "0.25em", 
-            color: "rgba(255,255,255,0.6)",
+            fontSize: "0.6rem", letterSpacing: "0.25em",
+            color: "#4a7fa3",
             display: "inline-flex", alignItems: "center", gap: "0.5rem",
+            textDecoration: "none",
           }}
         >
           ← All Projects
@@ -96,15 +96,15 @@ export default async function ProjectDetailPage({ params }: Params) {
         <div style={{ display: "flex", flexDirection: "column", gap: "4rem" }}>
           {/* Overview */}
           <section>
-            <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22",  marginBottom: "1.25rem" }}>Overview</p>
+            <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", marginBottom: "1.25rem" }}>Overview</p>
             <h2 style={{
               fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
               fontSize: "clamp(1.75rem,3.5vw,2.75rem)",
-              color: "#ffffff", marginBottom: "2rem", lineHeight: 1.1,
+              color: "#005c97", marginBottom: "2rem", lineHeight: 1.1,
             }}>
               {project.title}
             </h2>
-            <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "rgba(255,255,255,0.75)", maxWidth: "600px" }}>
+            <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "#2d6a9f", maxWidth: "600px" }}>
               {project.description}
             </p>
           </section>
@@ -112,10 +112,10 @@ export default async function ProjectDetailPage({ params }: Params) {
           {/* Highlights */}
           {project.highlights && (
             <section>
-              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22",  marginBottom: "1.5rem" }}>Project Highlights</p>
+              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", marginBottom: "1.5rem" }}>Project Highlights</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "1rem" }}>
                 {project.highlights.map((highlight, idx) => (
-                  <li key={idx} style={{ display: "flex", alignItems: "center", gap: "1rem", color: "rgba(255,255,255,0.75)", fontSize: "1rem" }}>
+                  <li key={idx} style={{ display: "flex", alignItems: "center", gap: "1rem", color: "#2d6a9f", fontSize: "1rem" }}>
                     <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#ee2e22", flexShrink: 0 }} />
                     {highlight}
                   </li>
@@ -127,13 +127,12 @@ export default async function ProjectDetailPage({ params }: Params) {
           {/* Master Layout */}
           {project.masterLayoutPdf && (
             <section>
-              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22",  marginBottom: "1.5rem" }}>Master Layout</p>
-              <div
-                className="transition-all duration-300 hover:border-red-500/40 hover:bg-white/[0.13] hover:shadow-[0_8px_32px_rgba(238,46,34,0.12)]"
-                style={{
-                background: "rgba(255,255,255,0.1)",
+              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", marginBottom: "1.5rem" }}>Master Layout</p>
+              <div style={{
+                background: "#ffffff",
                 padding: "2.5rem",
-                border: "1px solid rgba(255,255,255,0.15)",
+                border: "1px solid rgba(0,92,151,0.15)",
+                borderRadius: "0.5rem",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
@@ -144,8 +143,8 @@ export default async function ProjectDetailPage({ params }: Params) {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
                   </div>
                   <div>
-                    <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#ffffff" }}>Project Master Plan</p>
-                    <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.6)" }}>PDF Document</p>
+                    <p style={{ fontSize: "0.9rem", fontWeight: 600, color: "#005c97" }}>Project Master Plan</p>
+                    <p style={{ fontSize: "0.75rem", color: "#4a7fa3" }}>PDF Document</p>
                   </div>
                 </div>
                 <a
@@ -158,12 +157,11 @@ export default async function ProjectDetailPage({ params }: Params) {
                     textDecoration: "none",
                     padding: "0.8rem 1.5rem",
                     fontSize: "0.7rem",
-                    
                     letterSpacing: "0.15em",
                     fontWeight: 700,
+                    borderRadius: "4px",
                     transition: "all 0.3s ease"
                   }}
-                  className="btn-dark-hover"
                 >
                   View Master Layout →
                 </a>
@@ -174,7 +172,7 @@ export default async function ProjectDetailPage({ params }: Params) {
           {/* Videos */}
           {project.videos && project.videos.length > 0 && (
             <section>
-              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22",  marginBottom: "1.5rem" }}>Project Videos</p>
+              <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", marginBottom: "1.5rem" }}>Project Videos</p>
               <div style={{ display: "grid", gap: "1.5rem", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
                 {project.videos.map((video, idx) => (
                   <div key={idx} style={{ position: "relative", aspectRatio: "16/9", background: "#000000", overflow: "hidden" }}>
@@ -189,18 +187,19 @@ export default async function ProjectDetailPage({ params }: Params) {
             </section>
           )}
         </div>
-        <aside
-          className="transition-all duration-300 hover:border-white/20 hover:bg-white/[0.09] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]"
-          style={{
-          border: "1px solid rgba(255,255,255,0.1)",
-          background: "rgba(255,255,255,0.06)",
+
+        {/* Project Details sidebar */}
+        <aside style={{
+          border: "1px solid rgba(0,92,151,0.15)",
+          background: "#ffffff",
+          borderRadius: "0.5rem",
           padding: "2rem",
           display: "flex", flexDirection: "column", gap: "1.75rem",
           alignSelf: "start",
           position: "sticky",
           top: "6rem"
         }}>
-          <p style={{ fontSize: "0.55rem", letterSpacing: "0.35em", color: "#ee2e22",  paddingBottom: "1rem", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+          <p style={{ fontSize: "0.55rem", letterSpacing: "0.35em", color: "#ee2e22", paddingBottom: "1rem", borderBottom: "1px solid rgba(0,92,151,0.1)" }}>
             Project Details
           </p>
           {[
@@ -210,8 +209,8 @@ export default async function ProjectDetailPage({ params }: Params) {
             { label: "Area", value: project.area },
           ].map(item => (
             <div key={item.label}>
-              <p style={{ fontSize: "0.55rem", letterSpacing: "0.28em",  color: "rgba(255,255,255,0.5)", marginBottom: "0.4rem" }}>{item.label}</p>
-              <p style={{ fontSize: "0.95rem", color: "#ffffff", fontWeight: 500 }}>{item.value}</p>
+              <p style={{ fontSize: "0.55rem", letterSpacing: "0.28em", color: "#4a7fa3", marginBottom: "0.4rem" }}>{item.label}</p>
+              <p style={{ fontSize: "0.95rem", color: "#005c97", fontWeight: 600 }}>{item.value}</p>
             </div>
           ))}
         </aside>
@@ -221,38 +220,39 @@ export default async function ProjectDetailPage({ params }: Params) {
       <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2.5rem 2rem" }} aria-label="Project gallery">
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2.5rem" }}>
           <div style={{ width: "24px", height: "1px", background: "#ee2e22" }} />
-          <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", }}>Project Images</p>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22" }}>Project Images</p>
         </div>
 
         <SwipeCarousel images={project.gallery} />
       </section>
 
-      {/* Next project CTA */}
+      {/* Bottom CTA */}
       <div style={{ maxWidth: "1280px", margin: "4rem auto 0", padding: "0 2.5rem" }}>
         <div style={{
-          borderTop: "1px solid rgba(255,255,255,0.1)",
+          borderTop: "1px solid rgba(0,92,151,0.12)",
           paddingTop: "3rem",
           display: "flex", justifyContent: "space-between",
           alignItems: "center", flexWrap: "wrap", gap: "1.5rem",
         }}>
           <Link
             href="/projects"
-            className="link-gold-hover"
             style={{
               fontSize: "0.6rem", letterSpacing: "0.25em",
-               color: "rgba(255,255,255,0.6)",
+              color: "#4a7fa3",
+              textDecoration: "none",
             }}
           >
             ← Back to Projects
           </Link>
           <Link
             href="/contact"
-            className="btn-dark-hover"
             style={{
-              fontSize: "0.6rem", letterSpacing: "0.3em", 
+              fontSize: "0.6rem", letterSpacing: "0.3em",
               textDecoration: "none", padding: "0.9rem 2rem",
               background: "#ee2e22", color: "#ffffff",
               display: "inline-block",
+              borderRadius: "4px",
+              fontWeight: 700,
             }}
           >
             Enquire About This Property →

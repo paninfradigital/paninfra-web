@@ -48,7 +48,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: "800px", margin: "0 auto", position: "relative", textAlign: "center" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2.5rem" }}>
             <div style={{ width: "28px", height: "1px", background: "#ffffff" }} />
-            <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "#ffffff", }}>About Pan Infra</p>
+            <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "#ffffff" }}>About Pan Infra</p>
             <div style={{ width: "28px", height: "1px", background: "#ffffff" }} />
           </div>
           <h1 style={{
@@ -71,27 +71,28 @@ export default function AboutPage() {
         maxWidth: "900px", margin: "0 auto",
         padding: "5rem 2.5rem",
         textAlign: "center",
+        background: "#FFFFF2",
       }}>
         <div style={{ marginBottom: "5rem" }}>
-          <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22",  marginBottom: "1.5rem" }}>Our Mission</p>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.38em", color: "#ee2e22", marginBottom: "1.5rem" }}>Our Mission</p>
           <h2 style={{
             fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
             fontSize: "clamp(2.2rem,5vw,3.75rem)",
-            lineHeight: 1.1, color: "#ffffff", marginBottom: "2.5rem",
+            lineHeight: 1.1, color: "#005c97", marginBottom: "2.5rem",
           }}>
             Real Estate That Builds Real Wealth
           </h2>
-          <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: "1.5rem", maxWidth: "700px", margin: "0 auto 1.5rem" }}>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "#2d6a9f", marginBottom: "1.5rem", maxWidth: "700px", margin: "0 auto 1.5rem" }}>
             At Pan Infra, we believe every family deserves access to premium real estate with complete transparency, legal clarity, and lasting appreciation potential.
           </p>
-          <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: "3.5rem", maxWidth: "700px", margin: "0 auto 3.5rem" }}>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "#2d6a9f", marginBottom: "3.5rem", maxWidth: "700px", margin: "0 auto 3.5rem" }}>
             Every project begins with deep location research — understanding infrastructure pipelines, government master plans, and the long-term growth potential before a single plot is offered.
           </p>
           <div style={{ display: "flex", gap: "4rem", flexWrap: "wrap", justifyContent: "center" }}>
             {[{ n: "1,000+", l: "Families" }, { n: "800+", l: "Acres" }, { n: "15+", l: "Projects" }].map(s => (
               <div key={s.l} style={{ textAlign: "center" }}>
-                <div style={{ fontFamily: "var(--font-playfair,Georgia,serif)", fontSize: "2.5rem", color: "#ffffff", fontWeight: 600, lineHeight: 1 }}>{s.n}</div>
-                <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em",  color: "#ee2e22", marginTop: "0.5rem" }}>{s.l}</div>
+                <div style={{ fontFamily: "var(--font-playfair,Georgia,serif)", fontSize: "2.5rem", color: "#005c97", fontWeight: 600, lineHeight: 1 }}>{s.n}</div>
+                <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", color: "#ee2e22", marginTop: "0.5rem" }}>{s.l}</div>
               </div>
             ))}
           </div>
@@ -111,7 +112,7 @@ export default function AboutPage() {
             borderRadius: "0.5rem",
           }}>
             <span style={{ fontFamily: "var(--font-playfair,Georgia,serif)", fontSize: "2.25rem", color: "#ee2e22", lineHeight: 1 }}>2010</span>
-            <p style={{ fontSize: "0.5rem", letterSpacing: "0.25em", color: "rgba(255,255,255,0.5)",  marginTop: "0.3rem" }}>Est.</p>
+            <p style={{ fontSize: "0.5rem", letterSpacing: "0.25em", color: "rgba(255,255,255,0.5)", marginTop: "0.3rem" }}>Est.</p>
           </div>
         </div>
       </section>
@@ -119,16 +120,14 @@ export default function AboutPage() {
       {/* Parallax Content Flow */}
       <AboutParallax />
 
-
-
       {/* Timeline */}
-      <section style={{ maxWidth: "900px", margin: "0 auto", padding: "5rem 2.5rem" }} aria-label="Timeline">
+      <section style={{ maxWidth: "900px", margin: "0 auto", padding: "5rem 2.5rem", background: "#FFFFF2" }} aria-label="Timeline">
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-          <p style={{ fontSize: "0.6rem", letterSpacing: "0.4em", color: "#ee2e22",  marginBottom: "1.5rem" }}>Our Journey</p>
+          <p style={{ fontSize: "0.6rem", letterSpacing: "0.4em", color: "#ee2e22", marginBottom: "1.5rem" }}>Our Journey</p>
           <h2 style={{
             fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
             fontSize: "clamp(2.2rem,5vw,3.75rem)",
-            lineHeight: 1, color: "#ffffff",
+            lineHeight: 1, color: "#005c97",
           }}>
             Company Milestones
           </h2>
@@ -139,7 +138,7 @@ export default function AboutPage() {
               <li key={item.year} style={{
                 display: "grid", gridTemplateColumns: "100px 1fr",
                 gap: "2rem", padding: "1.75rem 0",
-                borderTop: "1px solid rgba(255,255,255,0.1)",
+                borderTop: "1px solid rgba(0,92,151,0.12)",
                 alignItems: "start",
                 textAlign: "left",
               }}>
@@ -148,7 +147,7 @@ export default function AboutPage() {
                   fontSize: "1.5rem", color: "#ee2e22", fontWeight: 600,
                   lineHeight: 1,
                 }}>{item.year}</p>
-                <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.85 }}>{item.text}</p>
+                <p style={{ fontSize: "1.05rem", color: "#2d6a9f", lineHeight: 1.85 }}>{item.text}</p>
               </li>
             ))}
           </ol>
@@ -157,7 +156,7 @@ export default function AboutPage() {
 
       {/* CTA band */}
       <section style={{ background: "#0A1628", padding: "4rem 2.5rem", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "rgba(255,255,255,0.7)",  marginBottom: "1.5rem" }}>Book a Site Visit</p>
+        <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem" }}>Book a Site Visit</p>
         <h2 style={{
           fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
           fontSize: "clamp(2rem,4.5vw,3.75rem)",
@@ -170,7 +169,7 @@ export default function AboutPage() {
           className="btn-white-hover"
           style={{
             display: "inline-flex", alignItems: "center",
-            fontSize: "0.6rem", letterSpacing: "0.3em", 
+            fontSize: "0.6rem", letterSpacing: "0.3em",
             textDecoration: "none", padding: "1rem 2.25rem",
             border: "1px solid #ffffff", color: "#ffffff",
           }}
