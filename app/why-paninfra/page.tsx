@@ -101,7 +101,7 @@ export default function WhyPanInfraPage() {
       {/* ── Page header ───────────────────────────── */}
       <section
         style={{
-          background: "#0A1628",
+          background: "#005c97",
           padding: "10rem 2.5rem 6rem",
           position: "relative",
           overflow: "hidden",
@@ -525,7 +525,7 @@ export default function WhyPanInfraPage() {
       </section>
 
       {/* ── Final CTA ─────────────────────────────── */}
-      <section style={{ background: "#0A1628", padding: "6rem 2.5rem", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+      <section style={{ background: "#005c97", padding: "6rem 2.5rem", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: "0.6rem", letterSpacing: "0.4em", color: "#ee2e22", marginBottom: "1.5rem" }}>
             Ready to invest in Hyderabad real estate?

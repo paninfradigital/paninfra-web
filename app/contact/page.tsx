@@ -28,7 +28,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section style={{ background: "#0A1628", padding: "10rem 2.5rem 6rem", textAlign: "center" }}>
+      <section style={{ background: "#005c97", padding: "10rem 2.5rem 6rem", textAlign: "center" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "#ee2e22", marginBottom: "2rem" }}>Get In Touch</p>
           <h1 style={{ fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)", fontSize: "clamp(2.5rem,6vw,5rem)", lineHeight: 1, color: "#ffffff" }}>

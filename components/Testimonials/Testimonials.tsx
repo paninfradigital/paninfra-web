@@ -17,7 +17,7 @@ export default function Testimonials() {
   return (
     <section
       style={{
-        background: "#0A1628",
+        background: "#005c97",
         padding: "7rem 2.5rem",
         overflow: "hidden",
         position: "relative",

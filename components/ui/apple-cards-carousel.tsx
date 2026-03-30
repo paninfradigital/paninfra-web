@@ -227,7 +227,7 @@ export const Card = ({
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
                 className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
-                style={{ fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)", color: "#0A1628", marginBottom: "1.5rem" }}
+                style={{ fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)", color: "#005c97", marginBottom: "1.5rem" }}
               >
                 {card.title}
               </motion.p>

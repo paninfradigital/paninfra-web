@@ -33,7 +33,7 @@ export default function AboutPage() {
       />
       {/* Dark hero */}
       <section style={{
-        background: "#0A1628",
+        background: "#005c97",
         padding: "6rem 2.5rem 4rem",
         overflow: "hidden",
         position: "relative",
@@ -155,7 +155,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA band */}
-      <section style={{ background: "#0A1628", padding: "4rem 2.5rem", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+      <section style={{ background: "#005c97", padding: "4rem 2.5rem", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <p style={{ fontSize: "0.6rem", letterSpacing: "0.45em", color: "rgba(255,255,255,0.7)", marginBottom: "1.5rem" }}>Book a Site Visit</p>
         <h2 style={{
           fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
