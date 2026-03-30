@@ -38,7 +38,7 @@ const features = [
 
 export default function WhyPanInfraStrip() {
   return (
-    <section style={{ background: "#005c97", padding: "7rem 2.5rem" }}>
+    <section style={{ background: "#FFFFF2", padding: "7rem 2.5rem", borderTop: "1px solid rgba(0,92,151,0.08)", borderBottom: "1px solid rgba(0,92,151,0.08)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -56,15 +56,15 @@ export default function WhyPanInfraStrip() {
             fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
             fontSize: "clamp(2.2rem,4.5vw,3.75rem)",
             lineHeight: 1.1,
-            color: "#ffffff",
+            color: "#005c97",
             fontWeight: 800,
             marginBottom: "1.75rem",
           }}>
             The Best Real Estate Company in{" "}
-            <span style={{ color: "#ffffff" }}>Hyderabad</span>
+            <span style={{ color: "#ee2e22" }}>Hyderabad</span>
           </h2>
           <p style={{
-            fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(255,255,255,0.6)",
+            fontSize: "1.05rem", lineHeight: 1.8, color: "#2d6a9f",
             maxWidth: "680px", margin: "0 auto",
           }}>
             Pan Infra offers premium plots, villa lands, and gated community properties. With 15+ years of trusted service and 1,000+ delivered projects, we make investing in Hyderabad real estate simple, secure, and rewarding.
@@ -81,32 +81,32 @@ export default function WhyPanInfraStrip() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.15 }}
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "#ffffff",
+                border: "1px solid rgba(0,92,151,0.12)",
                 borderRadius: "0.375rem",
                 padding: "2.5rem 2rem",
                 textAlign: "center",
-                transition: "border-color 0.3s, background 0.3s",
+                transition: "border-color 0.3s, box-shadow 0.3s",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.5)";
-                (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.08)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.35)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(0,92,151,0.08)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)";
-                (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.04)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.12)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
               }}
             >
-              <div style={{ color: "#ffffff", marginBottom: "1.25rem", display: "flex", justifyContent: "center" }}>
+              <div style={{ color: "#005c97", marginBottom: "1.25rem", display: "flex", justifyContent: "center" }}>
                 {f.icon}
               </div>
               <h3 style={{
                 fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
-                fontSize: "1.3rem", fontWeight: 700, color: "#ffffff", marginBottom: "0.5rem",
+                fontSize: "1.3rem", fontWeight: 700, color: "#005c97", marginBottom: "0.5rem",
               }}>
                 {f.title}
               </h3>
-              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", letterSpacing: "0.03em" }}>
+              <p style={{ fontSize: "0.85rem", color: "#4a7fa3", letterSpacing: "0.03em" }}>
                 {f.subtitle}
               </p>
             </motion.div>

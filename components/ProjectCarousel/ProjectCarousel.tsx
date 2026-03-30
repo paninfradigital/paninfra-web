@@ -24,19 +24,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div
           className="project-card-hover"
           style={{
-            background: "#111827",
+            background: "#ffffff",
             borderRadius: "1rem",
             overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.07)",
-            transition: "border-color 0.3s, transform 0.3s",
+            border: "1px solid rgba(0,92,151,0.12)",
+            transition: "border-color 0.3s, transform 0.3s, box-shadow 0.3s",
           }}
           onMouseEnter={e => {
-            (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.5)";
+            (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.35)";
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
+            (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 32px rgba(0,92,151,0.1)";
           }}
           onMouseLeave={e => {
-            (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)";
+            (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(0,92,151,0.12)";
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+            (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
           }}
         >
           {/* Image — 1:1 */}
@@ -72,13 +74,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
               fontSize: "1.25rem",
               fontWeight: 700,
-              color: "#ffffff",
+              color: "#005c97",
               marginBottom: "0.4rem",
               lineHeight: 1.2,
             }}>
               {project.title}
             </h3>
-            <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", marginBottom: "0.5rem", letterSpacing: "0.02em" }}>
+            <p style={{ fontSize: "0.8rem", color: "#4a7fa3", marginBottom: "0.5rem", letterSpacing: "0.02em" }}>
               {project.location}
             </p>
             <p style={{ fontSize: "0.75rem", color: "#ee2e22", fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase" }}>
@@ -93,7 +95,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function ProjectCarousel({ projects }: { projects: Project[] }) {
   return (
-    <section style={{ background: "#005c97", padding: "6rem 5vw" }} aria-label="Featured projects">
+    <section style={{ background: "#FFFFF2", padding: "6rem 5vw" }} aria-label="Featured projects">
 
       {/* Header */}
       <motion.div
@@ -110,19 +112,19 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
           fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
           fontSize: "clamp(2rem,4vw,3.25rem)",
           fontWeight: 800,
-          color: "#ffffff",
+          color: "#005c97",
           lineHeight: 1.1,
           marginBottom: "1.5rem",
         }}>
           Premium Land,{" "}
-          <span style={{ color: "#ffffff" }}>Timeless Value</span>
+          <span style={{ color: "#ee2e22" }}>Timeless Value</span>
         </h2>
         <Link
           href="/projects"
           style={{
             fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase",
-            textDecoration: "none", color: "rgba(255,255,255,0.6)",
-            borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: "3px",
+            textDecoration: "none", color: "#005c97",
+            borderBottom: "1px solid rgba(0,92,151,0.4)", paddingBottom: "3px",
             fontWeight: 600, transition: "color 0.3s, border-color 0.3s",
           }}
         >
