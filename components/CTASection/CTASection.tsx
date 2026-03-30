@@ -14,11 +14,11 @@ export default function CTASection() {
         transition={{ duration: 0.8 }}
         whileHover={{ boxShadow: "0 24px 64px rgba(238,46,34,0.12), 0 0 0 1px rgba(238,46,34,0.2)" }}
         style={{
-          background: "rgba(255,255,255,0.04)",
+          background: "linear-gradient(135deg, #0a1628 0%, #005c97 100%)",
           padding: "5rem 4rem",
           position: "relative",
           overflow: "hidden",
-          border: "1px solid rgba(255,255,255,0.1)",
+          border: "1px solid rgba(0,92,151,0.3)",
           borderRadius: "4px",
         }}
       >
