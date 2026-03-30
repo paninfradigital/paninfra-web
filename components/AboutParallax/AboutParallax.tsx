@@ -205,7 +205,7 @@ const SectionContent = ({
     <h3 style={{
       fontFamily: "var(--font-playfair,'Playfair Display',Georgia,serif)",
       fontSize: "clamp(2rem, 5vw, 4rem)",
-      color: "#ffffff",
+      color: "#005c97",
       lineHeight: 1.1,
       fontWeight: 700,
       marginBottom: "2rem",
@@ -219,7 +219,7 @@ const SectionContent = ({
         <p key={i} style={{
           fontSize: "1.1rem",
           lineHeight: 2,
-          color: "rgba(255,255,255,0.75)",
+          color: "#2d6a9f",
           marginBottom: "2.5rem",
           textAlign: "center",
           maxWidth: "700px",
@@ -243,7 +243,7 @@ const SectionContent = ({
           <div style={{
             fontFamily: "var(--font-playfair,Georgia,serif)",
             fontSize: "2.5rem",
-            color: "#ffffff",
+            color: "#005c97",
             fontWeight: 600,
             lineHeight: 1,
           }}>{s.n}</div>
