@@ -1,6 +1,3 @@
-# Vinay Atelier - Premium Architecture Portfolio (Next.js 14)
-
-A high-end architecture/interior portfolio inspired by premium studio UX patterns, rebuilt with original branding and placeholder assets.
 
 ## Stack
 
