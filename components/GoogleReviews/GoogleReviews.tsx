@@ -23,7 +23,7 @@ export default function GoogleReviews() {
   }, []);
 
   return (
-    <section style={{ padding: "8rem 2.5rem 9rem" }}>
+    <section style={{ padding: "8rem 2.5rem 9rem", background: "#FFFFF2" }}>
       <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -37,7 +37,7 @@ export default function GoogleReviews() {
           <h2 style={{
             fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)",
             fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
-            color: "#ffffff",
+            color: "#005c97",
             marginBottom: "1.75rem",
             lineHeight: 1,
             fontWeight: 800,
@@ -47,15 +47,33 @@ export default function GoogleReviews() {
           <div style={{ width: "80px", height: "2px", background: "#ee2e22", margin: "0 auto" }} />
         </div>
 
-        {/* Widget embed */}
+        {/* Widget embed — force light theme */}
         <style>{`
-          .elfsight-app-${ELFSIGHT_APP_ID} [class*="summary"],
-          .elfsight-app-${ELFSIGHT_APP_ID} [class*="header"],
+          .elfsight-app-${ELFSIGHT_APP_ID},
+          .elfsight-app-${ELFSIGHT_APP_ID} * {
+            color-scheme: light !important;
+          }
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="wrapper"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="container"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="card"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="review"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="item"] {
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+          }
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="text"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="name"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="author"],
           .elfsight-app-${ELFSIGHT_APP_ID} [class*="title"],
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="summary"],
           .elfsight-app-${ELFSIGHT_APP_ID} [class*="total"],
           .elfsight-app-${ELFSIGHT_APP_ID} [class*="rating-value"],
-          .elfsight-app-${ELFSIGHT_APP_ID} [class*="reviews-count"] {
-            color: #ffffff !important;
+          .elfsight-app-${ELFSIGHT_APP_ID} [class*="reviews-count"],
+          .elfsight-app-${ELFSIGHT_APP_ID} p,
+          .elfsight-app-${ELFSIGHT_APP_ID} span,
+          .elfsight-app-${ELFSIGHT_APP_ID} h3,
+          .elfsight-app-${ELFSIGHT_APP_ID} h4 {
+            color: #1a4f7a !important;
           }
         `}</style>
         <div style={{ width: "100%", minHeight: "480px" }}>
