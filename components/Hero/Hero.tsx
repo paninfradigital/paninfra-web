@@ -52,46 +52,16 @@ export default function Hero() {
           position: "relative",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
+          justifyContent: "center",
+          alignItems: "center",
           flexGrow: 1,
           padding: "7rem 2.5rem 2.5rem",
           zIndex: 1,
+          textAlign: "center",
         }}
       >
-        {/* Horizontal top rule */}
         <motion.div
-          style={{
-            position: "absolute",
-            top: "110px",
-            left: "2.5rem",
-            right: "2.5rem",
-            height: "1px",
-            background: "rgba(255,255,255,0.12)",
-            transformOrigin: "left",
-          }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1.4, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-        />
-
-        {/* Vertical index line */}
-        <motion.div
-          style={{
-            position: "absolute",
-            top: "25%",
-            left: "2.5rem",
-            width: "1px",
-            height: "120px",
-            background: "linear-gradient(to bottom, #005c97, transparent)",
-            transformOrigin: "top",
-          }}
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        />
-
-        <motion.div
-          style={{ y: textY, maxWidth: "1280px", width: "100%", margin: "0 auto" }}
+          style={{ y: textY, maxWidth: "900px", width: "100%" }}
         >
           {/* Main headline */}
           <h1
@@ -124,7 +94,7 @@ export default function Hero() {
                 </motion.span>
               </span>
             ))}
-            {/* Accent word in gold */}
+            {/* Accent word */}
             <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.15em" }}>
               <motion.span
                 style={{ display: "block", color: "#ee2e22", fontStyle: "italic", fontWeight: 800 }}
@@ -137,17 +107,16 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Bottom row */}
+          {/* Subtitle + Buttons */}
           <motion.div
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-              gap: "2rem",
-              marginTop: "2rem",
+              marginTop: "2.5rem",
               paddingTop: "1.5rem",
               borderTop: "1px solid rgba(255,255,255,0.1)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1.75rem",
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,13 +125,13 @@ export default function Hero() {
             <p style={{
               fontSize: "0.85rem",
               color: "rgba(255,255,255,0.6)",
-              maxWidth: "420px",
+              maxWidth: "480px",
               lineHeight: 1.75,
             }}>
               HMDA &amp; DTCP approved residential plots, luxury villas, and gated communities across Hyderabad&apos;s fastest-growing corridors.
             </p>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", justifyContent: "center" }}>
               <Link
                 href="/projects"
                 style={{
@@ -174,15 +143,10 @@ export default function Hero() {
                   padding: "1.2rem 2.5rem",
                   transition: "all 0.35s",
                   display: "inline-block",
-                  border: "none",
                   fontWeight: 800,
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = "0.9";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = "1";
-                }}
+                onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
               >
                 View Projects
               </Link>
