@@ -1,5 +1,5 @@
 
-## Tech Stack
+## Stack
 
 - Next.js 14 App Router + TypeScript
 - TailwindCSS
