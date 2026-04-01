@@ -38,7 +38,7 @@ const features = [
 
 export default function WhyPanInfraStrip() {
   return (
-    <section style={{ background: "#FFFFF2", padding: "7rem 2.5rem", borderTop: "1px solid rgba(0,92,151,0.08)", borderBottom: "1px solid rgba(0,92,151,0.08)" }}>
+    <section style={{ background: "#FFFFF2", padding: "5rem 2.5rem", borderTop: "1px solid rgba(0,92,151,0.08)", borderBottom: "1px solid rgba(0,92,151,0.08)" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}

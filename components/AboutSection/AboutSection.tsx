@@ -12,7 +12,7 @@ export default function AboutSection() {
     <section
       ref={ref}
       style={{
-        maxWidth: "1280px", margin: "0 auto", padding: "10rem 2.5rem",
+        maxWidth: "1280px", margin: "0 auto", padding: "5rem 2.5rem",
         display: "grid", gap: "5rem",
         alignItems: "center"
       }}

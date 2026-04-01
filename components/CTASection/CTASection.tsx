@@ -6,7 +6,7 @@ import { SITE } from "@/lib/constants";
 
 export default function CTASection() {
   return (
-    <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "2rem 2.5rem 7rem" }}>
+    <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "5rem 2.5rem" }}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

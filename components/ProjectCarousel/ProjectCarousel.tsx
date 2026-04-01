@@ -95,7 +95,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function ProjectCarousel({ projects }: { projects: Project[] }) {
   return (
-    <section style={{ background: "#FFFFF2", padding: "6rem 5vw" }} aria-label="Featured projects">
+    <section style={{ background: "#FFFFF2", padding: "5rem 5vw" }} aria-label="Featured projects">
 
       {/* Header */}
       <motion.div

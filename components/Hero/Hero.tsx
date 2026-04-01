@@ -236,48 +236,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* ── STATS STRIP ───────────────────────────────────── */}
-      <motion.div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          background: "rgba(0,0,0,0.6)",
-          backdropFilter: "blur(16px)",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          padding: "1.5rem 2.5rem",
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "3rem",
-          alignItems: "center",
-        }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 1.6 }}
-      >
-        <div style={{ maxWidth: "1280px", margin: "0 auto", width: "100%", display: "flex", gap: "3rem", flexWrap: "wrap" }}>
-          {[
-            { num: "1,000+", label: "Happy Families" },
-            { num: "800+", label: "Acres Developed" },
-            { num: "15+", label: "Projects Delivered" },
-            { num: "100%", label: "HMDA / DTCP Approved" },
-          ].map((stat) => (
-            <div key={stat.label} style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
-              <span style={{
-                fontFamily: "var(--font-playfair, Georgia, serif)",
-                fontSize: "1.6rem",
-                color: "#ee2e22",
-                fontWeight: 600,
-                lineHeight: 1,
-              }}>{stat.num}</span>
-              <span style={{
-                fontSize: "0.6rem",
-                letterSpacing: "0.2em",
-                color: "rgba(255,255,255,0.4)",
-              }}>{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
     </section>
   );
 }
