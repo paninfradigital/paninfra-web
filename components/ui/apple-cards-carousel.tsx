@@ -158,10 +158,12 @@ export const Card = ({
   card,
   index,
   layout = false,
+  clickable = true,
 }: {
   card: Card;
   index: number;
   layout?: boolean;
+  clickable?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -238,10 +240,10 @@ export const Card = ({
       </AnimatePresence>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        onClick={handleOpen}
-        className="rounded-2xl overflow-hidden flex flex-col items-start justify-end relative z-10 cursor-pointer"
-        style={{ width: "300px", height: "420px", flexShrink: 0 }}
-        whileHover={{ scale: 1.02 }}
+        onClick={clickable ? handleOpen : undefined}
+        className="rounded-2xl overflow-hidden flex flex-col items-start justify-end relative z-10"
+        style={{ width: "300px", height: "420px", flexShrink: 0, cursor: clickable ? "pointer" : "default" }}
+        whileHover={clickable ? { scale: 1.02 } : {}}
         transition={{ duration: 0.3 }}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         {...({ "data-layout": layout } as any)}

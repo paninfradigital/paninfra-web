@@ -43,6 +43,7 @@ export default function ServicesSection() {
       }}
       index={index}
       layout={true}
+      clickable={false}
     />
   ));
 
