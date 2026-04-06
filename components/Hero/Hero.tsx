@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
-const headline = ["Premium", "Plots &", "Villas"];
+const headline = ["Premium", "Plots & Villas"];
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
