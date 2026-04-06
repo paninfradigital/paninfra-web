@@ -168,7 +168,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "dukes-urban-village",
-    title: "Dukes Urban Village",
+    title: "PAN Dukes Urban Village",
     category: "Open Villa Plots",
     coverImage: "/covers/DUKES_URBAN_VILLAGE.png",
     heroImage: "/covers/DUKES_URBAN_VILLAGE.png",
@@ -177,7 +177,7 @@ export const PROJECTS: Project[] = [
     client: "Open for Booking",
     area: "90 Acres · 500 Plots",
     description:
-      "Dukes Urban Village is a premium open villa plots community located on the high-growth Kothur corridor, directly highway-facing with seamless access to Hyderabad's southern growth belt. Designed for those who value space, privacy, and strong appreciation — these DTCP-approved villa plots offer the freedom to build your dream home at your own pace.",
+      "PAN Dukes Urban Village is a premium open villa plots community located on the high-growth Kothur corridor, directly highway-facing with seamless access to Hyderabad's southern growth belt. Designed for those who value space, privacy, and strong appreciation — these DTCP-approved villa plots offer the freedom to build your dream home at your own pace.",
     gallery: [
       "/current/WhatsApp Image 2026-03-11 at 15.10.29.jpeg",
       "/current/WhatsApp Image 2026-03-11 at 15.10.30 (1).jpeg",
