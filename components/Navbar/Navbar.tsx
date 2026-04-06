@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   // Pages that start with a dark background hero/parallax section
-  const isDarkPage = pathname === "/" || pathname === "/projects" || pathname === "/why-paninfra" || pathname === "/about" || pathname === "/contact";
+  const isDarkPage = pathname === "/" || pathname === "/why-paninfra" || pathname === "/about" || pathname === "/contact";
 
   return (
     <header
