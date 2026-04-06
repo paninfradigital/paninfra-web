@@ -1,4 +1,4 @@
-export type ProjectCategory = "Residential Plots" | "Premium Villas" | "Gated Community" | "Commercial";
+export type ProjectCategory = "Residential Plots" | "Premium Villas" | "Gated Community" | "Commercial" | "Open Villa Plots";
 
 export type Project = {
   slug: string;
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "janwada-project",
     title: "Janwada Farmhouse",
-    category: "Residential Plots",
+    category: "Open Villa Plots",
     coverImage: "/covers/NEOPOLIS_JANWADA.png",
     heroImage: "/covers/NEOPOLIS_JANWADA.png",
     location: "Janwada, Hyderabad",
@@ -169,7 +169,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "dukes-urban-village",
     title: "Dukes Urban Village",
-    category: "Gated Community",
+    category: "Open Villa Plots",
     coverImage: "/covers/DUKES_URBAN_VILLAGE.png",
     heroImage: "/covers/DUKES_URBAN_VILLAGE.png",
     location: "Kothur, Hyderabad",
@@ -204,7 +204,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "dukes-county",
     title: "Dukes County",
-    category: "Residential Plots",
+    category: "Open Villa Plots",
     coverImage: "/covers/DukesCounty_Velimala.png",
     heroImage: "/covers/DukesCounty_Velimala.png",
     location: "Velimala, Hyderabad",
@@ -222,6 +222,7 @@ export const PROJECTS: Project[] = [
 
 export const PROJECT_FILTERS: Array<ProjectCategory | "All"> = [
   "All",
+  "Open Villa Plots",
   "Residential Plots",
   "Premium Villas",
   "Gated Community",

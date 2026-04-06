@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Project } from "@/lib/constants";
 
 const BADGE_MAP: Record<string, string> = {
+  "Open Villa Plots": "HMDA & DTCP Approved",
   "Residential Plots": "HMDA & DTCP Approved",
   "Gated Community": "Open for Registration",
   "Premium Villas": "New Launch",

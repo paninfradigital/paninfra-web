@@ -55,7 +55,7 @@ export default function Hero() {
           justifyContent: "center",
           alignItems: "flex-start",
           flexGrow: 1,
-          padding: "7rem 2.5rem 2.5rem",
+          padding: "7rem 2.5rem 2.5rem 5rem",
           zIndex: 1,
           textAlign: "left",
         }}
