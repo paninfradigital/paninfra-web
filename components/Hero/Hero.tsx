@@ -53,22 +53,22 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-start",
           flexGrow: 1,
           padding: "7rem 2.5rem 2.5rem",
           zIndex: 1,
-          textAlign: "center",
+          textAlign: "left",
         }}
       >
         <motion.div
-          style={{ y: textY, maxWidth: "900px", width: "100%" }}
+          style={{ y: textY, maxWidth: "800px", width: "100%" }}
         >
           {/* Main headline */}
           <h1
             style={{
               fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)",
-              fontSize: "clamp(2.5rem, 6vw, 6rem)",
-              lineHeight: 0.88,
+              fontSize: "clamp(2rem, 5vw, 4.5rem)",
+              lineHeight: 1,
               color: "#ffffff",
               margin: "0 0 1rem",
               fontWeight: 700,
@@ -115,7 +115,7 @@ export default function Hero() {
               borderTop: "1px solid rgba(255,255,255,0.1)",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              alignItems: "flex-start",
               gap: "1.75rem",
             }}
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function Hero() {
               HMDA &amp; DTCP approved residential plots, luxury villas, and gated communities across Hyderabad&apos;s fastest-growing corridors.
             </p>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", justifyContent: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", justifyContent: "flex-start" }}>
               <Link
                 href="/projects"
                 style={{
