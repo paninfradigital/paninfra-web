@@ -12,8 +12,8 @@ export default function AboutSection() {
     <section
       ref={ref}
       style={{
-        maxWidth: "1280px", margin: "0 auto", padding: "5rem 2.5rem",
-        display: "grid", gap: "5rem",
+        maxWidth: "1280px", margin: "0 auto", padding: "3rem 2.5rem",
+        display: "grid", gap: "3rem",
         alignItems: "center"
       }}
       className="grid-cols-1 md:grid-cols-[1fr_0.8fr]"

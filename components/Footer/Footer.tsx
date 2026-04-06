@@ -32,21 +32,21 @@ export default function Footer() {
                 }}
               />
             </Link>
-            <p style={{ fontSize: "0.75rem", color: "#005c97", letterSpacing: "0.3em", marginBottom: "1.25rem", fontWeight: 800 }}>
+            <p style={{ fontSize: "0.75rem", color: "#005c97", letterSpacing: "0.1em", marginBottom: "1.25rem", fontWeight: 800, fontFamily: "Poppins, sans-serif" }}>
               Established 2010
             </p>
-            <p style={{ fontSize: "0.9rem", color: "#666666", lineHeight: 1.8 }}>
+            <p style={{ fontSize: "0.9rem", color: "#666666", lineHeight: 1.8, fontFamily: "Poppins, sans-serif" }}>
               Hyderabad&apos;s most trusted real estate developer. Delivering premium plots and luxury villas across all growth corridors.
             </p>
           </div>
 
           {/* Column 2: Navigation */}
           <div>
-            <p style={{ fontSize: "0.7rem", letterSpacing: "0.25em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500 }}>Explore Our Vision</p>
+            <p style={{ fontSize: "0.7rem", letterSpacing: "0.1em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500, fontFamily: "Poppins, sans-serif" }}>Explore Our Vision</p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               {NAV_LINKS.map(link => (
                 <li key={link.href}>
-                  <Link href={link.href} style={{ fontSize: "0.9rem", color: "#2d6a9f", textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}>
+                  <Link href={link.href} style={{ fontSize: "0.9rem", color: "#2d6a9f", textDecoration: "none", transition: "color 0.2s", fontWeight: 500, fontFamily: "Poppins, sans-serif" }}>
                     {link.label}
                   </Link>
                 </li>
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Column 3: Reach Us */}
           <div>
-            <p style={{ fontSize: "0.7rem", letterSpacing: "0.25em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500 }}>Reach Us Below</p>
+            <p style={{ fontSize: "0.7rem", letterSpacing: "0.1em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500, fontFamily: "Poppins, sans-serif" }}>Reach Us Below</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
               <a
                 href={SITE.whatsapp}
@@ -70,6 +70,7 @@ export default function Footer() {
                   color: "#2d6a9f",
                   textDecoration: "none",
                   transition: "color 0.25s",
+                  fontFamily: "Poppins, sans-serif",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#ee2e22")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#555555")}
@@ -86,6 +87,7 @@ export default function Footer() {
                   color: "#2d6a9f",
                   textDecoration: "none",
                   transition: "color 0.25s",
+                  fontFamily: "Poppins, sans-serif",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#ee2e22")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#555555")}
@@ -97,7 +99,7 @@ export default function Footer() {
 
           {/* Column 4: Location */}
           <div>
-            <p style={{ fontSize: "0.7rem", letterSpacing: "0.25em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500 }}>Pan Infra Spaces Pvt Ltd</p>
+            <p style={{ fontSize: "0.7rem", letterSpacing: "0.1em", color: "#005c97", marginBottom: "1.75rem", fontWeight: 500, fontFamily: "Poppins, sans-serif" }}>Pan Infra Spaces Pvt Ltd</p>
             <div style={{ marginBottom: "1.5rem" }}>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address)}`}
@@ -110,7 +112,8 @@ export default function Footer() {
                   textDecoration: "none",
                   display: "block",
                   transition: "color 0.2s",
-                  marginBottom: "1.5rem"
+                  marginBottom: "1.5rem",
+                  fontFamily: "Poppins, sans-serif",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#ee2e22")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#555555")}
@@ -134,10 +137,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", marginTop: "5rem", paddingTop: "2rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "2rem" }}>
           <div>
-            <p style={{ fontSize: "0.7rem", color: "#999999", marginBottom: "0.4rem" }}>
+            <p style={{ fontSize: "0.7rem", color: "#999999", marginBottom: "0.4rem", fontFamily: "Poppins, sans-serif" }}>
               © {new Date().getFullYear()} Pan Infra. All rights reserved.
             </p>
-            <p style={{ fontSize: "0.65rem", color: "#bbbbbb", letterSpacing: "0.05em" }}>
+            <p style={{ fontSize: "0.65rem", color: "#bbbbbb", letterSpacing: "0.02em", fontFamily: "Poppins, sans-serif" }}>
               Hyderabad, India
             </p>
           </div>
@@ -154,9 +157,10 @@ export default function Footer() {
                   fontSize: "0.75rem",
                   color: "#005c97",
                   textDecoration: "none",
-                  letterSpacing: "0.15em",
+                  letterSpacing: "0.05em",
                   fontWeight: 700,
-                  transition: "color 0.2s"
+                  transition: "color 0.2s",
+                  fontFamily: "Poppins, sans-serif",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#ee2e22")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#005c97")}

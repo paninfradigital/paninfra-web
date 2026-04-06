@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Poppins } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -24,11 +24,18 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "900"],
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${inter.variable} ${playfair.variable} ${poppins.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

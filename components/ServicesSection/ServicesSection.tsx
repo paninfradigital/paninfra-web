@@ -47,7 +47,7 @@ export default function ServicesSection() {
   ));
 
   return (
-    <section style={{ padding: "5rem 0" }} aria-label="Services">
+    <section style={{ padding: "3rem 2.5rem" }} aria-label="Services">
       <div style={{ padding: "0 2.5rem", marginBottom: "4rem", maxWidth: "1280px", margin: "0 auto 4rem" }}>
 
         {/* Header */}

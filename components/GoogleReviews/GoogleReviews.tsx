@@ -58,7 +58,7 @@ function GoogleLogo() {
 
 export default function GoogleReviews() {
   return (
-    <section style={{ padding: "5rem 2.5rem", background: "#FFFFF2" }}>
+    <section style={{ padding: "3rem 2.5rem", background: "#FFFFF2" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
