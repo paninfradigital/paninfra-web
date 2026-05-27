@@ -19,7 +19,9 @@ export default function Navbar() {
   }, []);
 
   // Pages that start with a dark background hero/parallax section
+  const isLandingPage = pathname === "/landingpage" || pathname === "/prime-estate";
   const isDarkPage = pathname === "/" || pathname === "/why-paninfra" || pathname === "/about" || pathname === "/contact";
+  const useDarkNav = isDarkPage || isLandingPage;
 
   return (
     <header
@@ -29,9 +31,13 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        borderBottom: scrolled ? "1px solid rgba(0,0,0,0.06)" : "1px solid transparent",
-        background: scrolled ? "rgba(255,255,242,0.96)" : "transparent",
-        backdropFilter: scrolled ? "blur(14px)" : "none",
+        borderBottom: isLandingPage
+          ? "1px solid rgba(255,255,255,0.05)"
+          : scrolled
+            ? "1px solid rgba(0,0,0,0.06)"
+            : "1px solid transparent",
+        background: isLandingPage ? "#6f5f4c" : scrolled ? "rgba(255,255,242,0.96)" : "transparent",
+        backdropFilter: isLandingPage ? "none" : scrolled ? "blur(14px)" : "none",
         transition: "all 0.4s ease",
       }}
     >
@@ -59,7 +65,7 @@ export default function Navbar() {
             height={60}
             style={{
               objectFit: "contain",
-              filter: isDarkPage && !scrolled ? "brightness(0) invert(1)" : "none",
+              filter: useDarkNav && !scrolled || isLandingPage ? "brightness(0) invert(1)" : "none",
               transition: "filter 0.3s ease"
             }}
             priority
@@ -78,10 +84,10 @@ export default function Navbar() {
           className="hidden md:flex"
         >
           {NAV_LINKS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (isLandingPage && item.href === "/");
             const defaultColor = isActive
               ? "#ee2e22"
-              : isDarkPage && !scrolled
+              : useDarkNav && !scrolled || isLandingPage
                 ? "rgba(255,255,255,0.85)"
                 : "#005c97";
 
@@ -156,7 +162,7 @@ export default function Navbar() {
             width: "42px",
             height: "42px",
             fontSize: "1.3rem",
-            color: isDarkPage && !scrolled ? "#ffffff" : "#005c97",
+            color: useDarkNav && !scrolled || isLandingPage ? "#ffffff" : "#005c97",
           }}
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}

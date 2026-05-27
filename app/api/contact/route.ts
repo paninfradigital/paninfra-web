@@ -1,6 +1,26 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+function escapeHtml(value: unknown) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function optionalHtmlField(label: string, value: unknown) {
+  if (!value) return "";
+
+  return `
+    <div class="field">
+      <div class="label">${label}:</div>
+      <div class="value">${escapeHtml(value)}</div>
+    </div>
+  `;
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -63,25 +83,29 @@ export async function POST(request: Request) {
             <div class="content">
               <div class="field">
                 <div class="label">Name:</div>
-                <div class="value">${body.name}</div>
+                <div class="value">${escapeHtml(body.name)}</div>
               </div>
               <div class="field">
                 <div class="label">Email:</div>
-                <div class="value"><a href="mailto:${body.email}">${body.email}</a></div>
+                <div class="value"><a href="mailto:${escapeHtml(body.email)}">${escapeHtml(body.email)}</a></div>
               </div>
               ${
                 body.phone
                   ? `
               <div class="field">
                 <div class="label">Phone:</div>
-                <div class="value"><a href="tel:${body.phone}">${body.phone}</a></div>
+                <div class="value"><a href="tel:${escapeHtml(body.phone)}">${escapeHtml(body.phone)}</a></div>
               </div>
               `
                   : ""
               }
+              ${optionalHtmlField("Budget", body.budget)}
+              ${optionalHtmlField("Interested Property", body.propertyInterest)}
+              ${optionalHtmlField("Looking for Sq.Yds", body.sqYards)}
+              ${optionalHtmlField("Source", body.source)}
               <div class="field">
                 <div class="label">Message:</div>
-                <div class="value">${body.message.replace(/\n/g, "<br>")}</div>
+                <div class="value">${escapeHtml(body.message).replace(/\n/g, "<br>")}</div>
               </div>
             </div>
             <div class="footer">
@@ -98,6 +122,10 @@ New Contact Form Submission - Pan Infra
 Name: ${body.name}
 Email: ${body.email}
 ${body.phone ? `Phone: ${body.phone}` : ""}
+${body.budget ? `Budget: ${body.budget}` : ""}
+${body.propertyInterest ? `Interested Property: ${body.propertyInterest}` : ""}
+${body.sqYards ? `Looking for Sq.Yds: ${body.sqYards}` : ""}
+${body.source ? `Source: ${body.source}` : ""}
 
 Message:
 ${body.message}
