@@ -256,7 +256,7 @@ export default function Landingpage() {
       <section className={styles.hero} id="home">
         <div className={`${styles.container} ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
-            <span className={styles.badge}>#1 Luxury Real Estate</span>
+            <span className={styles.badge}>Real Estate Developer In Hyderabad</span>
             <h1>
               Find Your <span className={styles.highlight}>Dream Home</span> with Confidence
             </h1>
@@ -291,14 +291,14 @@ export default function Landingpage() {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionTag}>Featured Listings</span>
             <h2>
-              Handpicked <span className={styles.highlight}>Premium Properties</span>
+              Handpicked <span className={styles.highlight}>Premium Properties In Hyderabad</span>
             </h2>
             <p>Modern designs, prime locations, and exceptional value.</p>
           </div>
 
           <div className={styles.propertiesGrid}>
             {properties.map((property) => (
-              <article className={styles.propertyCard} key={property.name}>
+              <a className={styles.propertyCard} key={property.name} href={property.href}>
                 <div className={styles.propertyImg}>
                   <Image src={property.image} alt={property.alt} fill sizes="(max-width: 900px) 100vw, 33vw" />
                 </div>
@@ -316,11 +316,11 @@ export default function Landingpage() {
                     </span>
                   </div>
                   <span className={styles.propertyStatus}>{property.status}</span>
-                  <a className={styles.btnProperty} href={property.href}>
+                  <span className={styles.btnProperty}>
                     View More <FaArrowRight />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
@@ -494,7 +494,7 @@ export default function Landingpage() {
 
               <div className={styles.formGroup}>
                 <label htmlFor="message">
-                  <FaCommentDots /> Message / Requirements *
+                  <FaCommentDots /> Message / Requirements 
                 </label>
                 <textarea
                   id="message"
