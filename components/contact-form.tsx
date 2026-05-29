@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const inputStyle = {
@@ -23,6 +24,7 @@ const labelStyle = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   async function handleSubmit(formData: FormData) {
@@ -40,6 +42,7 @@ export default function ContactForm() {
       });
       if (!res.ok) throw new Error();
       setStatus("done");
+      router.push("/thank-you");
     } catch {
       setStatus("error");
     }
