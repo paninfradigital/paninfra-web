@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import {
@@ -82,6 +83,7 @@ function isValidPhone(phone) {
 }
 
 export default function Landingpage() {
+  const router = useRouter();
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
@@ -208,6 +210,7 @@ export default function Landingpage() {
       setForm(initialForm);
       setErrors({});
       setCooldown(5);
+      router.push("/thank-you");
     } catch (error) {
       setStatus({
         type: "error",
